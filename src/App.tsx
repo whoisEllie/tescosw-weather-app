@@ -1,14 +1,12 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import cities from "./data/cities.json"
 import './App.css'
-import { useDispatch, useSelector } from 'react-redux'
+import { useAppDispatch, useAppSelector } from './state/hooks'
 import { increment, decrement } from './state/counter/counterSlice.js'
 
 function App() {
-	const count = useSelector((state) => state.counter.value)
-	const dispatch = useDispatch()
+	const count = useAppSelector((state) => state.counter.value)
+	const dispatch = useAppDispatch()
 
 	return (
 		<>
