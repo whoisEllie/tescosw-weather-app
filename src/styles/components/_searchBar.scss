@@ -1,3 +1,19 @@
-.search {
+.searchBar {
   display: flex;
+  width: 20rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: black 2px solid;
+  padding: 1rem;
+}
+
+.resultsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+
+  button {
+    text-align: left;
+  }
 }

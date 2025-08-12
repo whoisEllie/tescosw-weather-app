@@ -1,3 +1,9 @@
+@use '../abstract/mixins' as mix;
+
 .mainWrapper {
   width: 100vw;
+}
+
+.tempCity {
+  @include mix.flex-center();
 }
