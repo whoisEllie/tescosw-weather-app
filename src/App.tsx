@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import { useSelector } from "react-redux"
+import ForecastTable from "./components/ForecastTable"
 import type { RootState } from "./state/store"
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 			<Header />
 			<div className="tempCity">
 				{selectedCity?.name}
+				<ForecastTable />
 			</div>
 
 		</div>

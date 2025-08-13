@@ -21,7 +21,6 @@ const searchSlice = createSlice({
 	initialState,
 	reducers: {
 		selectCity(state, action) {
-			console.log(action.payload)
 			state.selectedCity = action.payload;
 		},
 		clearSelectedCity(state) {

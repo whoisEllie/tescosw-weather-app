@@ -5,5 +5,6 @@
 }
 
 .tempCity {
-  @include mix.flex-center();
+  padding-top: 5rem;
+  @include mix.flex-center(column, 2rem);
 }
