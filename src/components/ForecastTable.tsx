@@ -2,6 +2,7 @@
 import { useSelector } from 'react-redux';
 import { selectForecast } from '../state/forecast/forecastSlice';
 import type { DailyForecast } from '../state/forecast/forecastSlice'
+import { t } from '../utils/localization';
 
 export default function ForecastTable() {
 	const forecast = useSelector(selectForecast);
@@ -15,7 +16,7 @@ export default function ForecastTable() {
 	}
 
 	if (forecast.status === 'idle' || forecast.daily.length === 0) {
-		return <p>No forecast available. Please select a city.</p>;
+		return <p>{t("noforecast")}</p>;
 	}
 
 	return (

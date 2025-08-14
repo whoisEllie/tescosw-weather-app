@@ -1,3 +1,5 @@
+import { getOWMLanguage } from "../utils/localization";
+
 export interface ForecastEntry {
 	date: string,
 	temp: {
@@ -35,7 +37,6 @@ export interface ForecastResponse {
 	list: ForecastEntry[];
 }
 
-
 export interface ForecastEntryApiResponse {
 	dt: number;
 	main: {
@@ -59,17 +60,17 @@ export interface ForecastEntryApiResponse {
 		gust: number;
 	};
 	visibility: number;
-	pop: number; // probability of precipitation
+	pop: number;
 	rain?: {
-		"3h": number; // mm of rain in the last 3 hours
+		"3h": number;
 	};
 	snow?: {
-		"3h": number; // mm of snow in the last 3 hours
+		"3h": number;
 	};
 	sys: {
-		pod: string; // "d" for day, "n" for night
+		pod: string;
 	};
-	dt_txt: string; // date/time string
+	dt_txt: string;
 }
 
 export interface WeatherDescription {
@@ -89,8 +90,8 @@ export interface CityInfo {
 	country: string;
 	population: number;
 	timezone: number;
-	sunrise: number; // unix timestamp
-	sunset: number; // unix timestamp
+	sunrise: number;
+	sunset: number;
 }
 
 
@@ -100,9 +101,7 @@ export async function fetchFiveDayForecast(lat: number, lon: number): Promise<Fo
 		throw new Error('Missing OpenWeatherMap API key.');
 	}
 
-	//TODO: Configure automatic langauge detection
-
-	const endpoint = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&lang=${"cz"}&units=metric&appid=${apiKey}`;
+	const endpoint = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&lang=${getOWMLanguage()}&units=metric&appid=${apiKey}`;
 
 	const res = await fetch(endpoint);
 

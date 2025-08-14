@@ -102,8 +102,6 @@ export const fetchForecast = createAsyncThunk(
 	async (coords: Coords) => {
 		const raw = await fetchFiveDayForecast(coords.lat, coords.lon);
 
-		//TODO: Better type-ing of coords
-
 		const daysMap: Record<string, DailyForecast> = {};
 		const cacheMap: Record<string, CachedValues> = {};
 

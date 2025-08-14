@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { selectCity } from "../state/search/searchSlice";
 import type { City } from "../state/search/searchSlice";
+import { t } from "../utils/localization";
 
 function SearchBar() {
 	const dispatch = useDispatch();
@@ -58,7 +59,7 @@ function SearchBar() {
 				))}
 
 				{query && results.length === 0 && (
-					<div>No matches found</div>
+					<div>{t("nomatches")}</div>
 				)}
 			</div>
 		</div>

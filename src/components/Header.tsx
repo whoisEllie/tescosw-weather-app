@@ -1,11 +1,12 @@
+import { t } from '../utils/localization'
 import SearchBar from './SearchBar'
 
 function Header() {
 	return (
 		<div className="header">
-			<button>Settings</button>
-			<SearchBar />
-			<button>Dark/Light</button>
+			<button>{t("settings")}</button>
+			< SearchBar />
+			<button>{t("darklight")}</button>
 		</div>
 	)
 }
