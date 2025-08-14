@@ -39,21 +39,37 @@ function SearchBar() {
 
 	return (
 		<div>
-			<form onSubmit={event => {
-				dispatch(selectCity(results[0]))
-				setPlaceholder(results[0].name);
-				setQuery("");
-				event.preventDefault();
-				event.stopPropagation();
-			}}>
-				<input
-					type="text"
-					value={query}
-					placeholder={placeholder}
-					onChange={(e) => setQuery(e.target.value)}
-					className="searchBar"
-				/>
-			</form>
+			<div className="searchGroup">
+				<form onSubmit={event => {
+					dispatch(selectCity(results[0]))
+					setPlaceholder(results[0].name);
+					setQuery("");
+					event.preventDefault();
+					event.stopPropagation();
+				}}>
+					<input
+						type="text"
+						value={query}
+						placeholder={placeholder}
+						onChange={(e) => setQuery(e.target.value)}
+						className="searchBar"
+					/>
+				</form>
+				<button className="geolocate" onClick={() => {
+					navigator.geolocation.getCurrentPosition((position) => {
+						const { latitude, longitude } = position.coords;
+
+						let mockCity = {
+							id: 0,
+							name: "",
+							state: undefined,
+							country: "",
+							coord: { lon: longitude, lat: latitude }
+						}
+						dispatch(selectCity(mockCity))
+					});
+				}}><img src="/public/icons/pin.svg" /></button>
+			</div>
 
 			<div className="resultsCard">
 				{results.map((city) => (
@@ -73,7 +89,7 @@ function SearchBar() {
 					<div>{t("nomatches")}</div>
 				)}
 			</div>
-		</div>
+		</div >
 	);
 }
 
