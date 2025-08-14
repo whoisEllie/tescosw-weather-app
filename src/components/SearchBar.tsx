@@ -8,6 +8,7 @@ function SearchBar() {
 	const dispatch = useDispatch();
 	const [cities, setCities] = useState<City[]>([]);
 	const [query, setQuery] = useState("");
+	const [placeholder, setPlaceholder] = useState("Enter a city...");
 
 	useEffect(() => {
 		fetch("/cities.json")
@@ -38,12 +39,21 @@ function SearchBar() {
 
 	return (
 		<div>
-			<input
-				type="text"
-				value={query}
-				onChange={(e) => setQuery(e.target.value)}
-				className="searchBar"
-			/>
+			<form onSubmit={event => {
+				dispatch(selectCity(results[0]))
+				setPlaceholder(results[0].name);
+				setQuery("");
+				event.preventDefault();
+				event.stopPropagation();
+			}}>
+				<input
+					type="text"
+					value={query}
+					placeholder={placeholder}
+					onChange={(e) => setQuery(e.target.value)}
+					className="searchBar"
+				/>
+			</form>
 
 			<div className="resultsCard">
 				{results.map((city) => (
@@ -52,6 +62,7 @@ function SearchBar() {
 						onClick={() => {
 							dispatch(selectCity(city));
 							setQuery("");
+							setPlaceholder(city.name);
 						}}
 					>
 						{city.name}, {city.state ? `${city.state},` : ""} {city.country}

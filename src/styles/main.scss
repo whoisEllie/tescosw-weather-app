@@ -7,6 +7,11 @@
 @use "components/header" as *;
 @use "components/mainWrapper" as *;
 @use "components/searchBar" as *;
+@use "components/forecastTable" as *;
+@use "components/currentWeather" as *;
+@use "components/dailyForecastTable" as *;
+@use "components/windConditions" as *;
+@use "components/generics" as *;
 
 @use "themes/light" as *;
 @use "themes/dark" as *;

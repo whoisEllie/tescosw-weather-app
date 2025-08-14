@@ -1,0 +1,53 @@
+.current-wrapper {
+  background-color: #272727;
+  box-shadow: #272727 0 0 5px 6px;
+  color: white;
+  display: grid;
+  position: relative;
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden;
+  border-radius: 25px;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+}
+
+.loading-wrapper {
+  background-color: #272727;
+  box-shadow: #272727 0 0 5px 6px;
+  color: white;
+  position: relative;
+  border-radius: 25px;
+}
+
+.current-icon {
+  height: 6rem;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.current-temperature {
+  font-size: 6rem;
+  font-weight: 200;
+  display: flex;
+  justify-content: right;
+  margin-bottom: 0;
+  margin-top: auto;
+  line-height: 0.8;
+}
+
+.current-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  grid-column-end: span 2;
+  font-size: 1.5rem;
+}
+
+.current-city {
+  font-weight: bold;
+}
+
+.current-description {
+  color: #FFFFFF99;
+}

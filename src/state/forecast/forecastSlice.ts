@@ -7,7 +7,7 @@ interface Coords {
 	lon: number,
 }
 
-interface HourlyData {
+export interface HourlyData {
 	date: string,
 	temp: {
 		temperature: number,
@@ -133,7 +133,7 @@ export const fetchForecast = createAsyncThunk(
 
 			//TODO: Use sunrise/sunset times for more accurate daylight calc
 			// Check only during daylight hours
-			if (dateObj.getHours() > 6 && dateObj.getHours() < 21) {
+			if ((dateObj.getHours() > 6 && dateObj.getHours() < 21) || cacheMap[dateKey].detailAggregate.length == 0) {
 				cacheMap[dateKey].detailAggregate.push(`${item.details.description};${item.details.icon}`);
 				cacheMap[dateKey].temperatureAggregate.push(item.temp.temperature);
 			}

@@ -2,9 +2,14 @@
 
 .mainWrapper {
   width: 100vw;
+  height: 100vh;
+  background-color: #101010;
 }
 
-.tempCity {
-  padding-top: 5rem;
-  @include mix.flex-center(column, 2rem);
+.body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 40vh);
+  gap: 2rem;
+  padding: 2rem;
 }

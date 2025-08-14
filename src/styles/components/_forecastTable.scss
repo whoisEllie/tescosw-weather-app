@@ -1,0 +1,45 @@
+@use '../abstract/variables' as *;
+
+.forecast-wrapper {
+  background-color: #272727;
+  box-shadow: #272727 0 0 5px 6px;
+  color: white;
+  grid-column-end: span 2;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.weather-card {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 23px;
+}
+
+.weather-card:hover {
+  background-color: #343434;
+  box-shadow: inset #272727 0 0 5px 6px;
+}
+
+
+.icon {
+  width: 50%;
+  padding: 1.5rem 0;
+}
+
+.align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small {
+  font-size: 0.75rem;
+}

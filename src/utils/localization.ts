@@ -16,65 +16,82 @@ export function getOWMLanguage(): string {
 
 const translations: Record<string, Record<string, string>> = {
 	en: {
-		settings: "Settings",
-		darklight: "Dark/Light",
 		noforecast: "No forecast available. Please select a city.",
 		nomatches: "No matches found",
-	},
-	fr: {
-		settings: "Paramètres",
-		darklight: "Clair/Sombre",
-		noforecast: "Aucune prévision disponible. Veuillez sélectionner une ville.",
-		nomatches: "Aucun résultat trouvé",
+		'current-conditions': "Current Conditions",
+		'five-day-forecast': "Five Day Forecast",
+		'daily-forecast': "Hourly Forecast",
+		'wind-forecast': "Wind Conditions",
+		speed: "speed",
+		gusts: "gusts",
+		direction: "direction"
 	},
 	de: {
-		settings: "Einstellungen",
-		darklight: "Hell/Dunkel",
-		noforecast: "Keine Vorhersage verfügbar. Bitte wählen Sie eine Stadt aus.",
+		noforecast: "Keine Vorhersage verfügbar. Bitte wählen Sie eine Stadt.",
 		nomatches: "Keine Treffer gefunden",
+		'current-conditions': "Aktuelle Bedingungen",
+		'five-day-forecast': "Fünf-Tage-Vorhersage",
+		'daily-forecast': "Stündliche Vorhersage",
+		'wind-forecast': "Windbedingungen",
+		speed: "Geschwindigkeit",
+		gusts: "Böen",
+		direction: "Richtung"
 	},
-	es: {
-		settings: "Configuración",
-		darklight: "Claro/Oscuro",
-		noforecast: "No hay pronóstico disponible. Por favor seleccione una ciudad.",
-		nomatches: "No se encontraron coincidencias",
+	fr: {
+		noforecast: "Aucune prévision disponible. Veuillez sélectionner une ville.",
+		nomatches: "Aucune correspondance trouvée",
+		'current-conditions': "Conditions actuelles",
+		'five-day-forecast': "Prévisions sur cinq jours",
+		'daily-forecast': "Prévisions horaires",
+		'wind-forecast': "Conditions du vent",
+		speed: "vitesse",
+		gusts: "rafales",
+		direction: "direction"
 	},
 	it: {
-		settings: "Impostazioni",
-		darklight: "Chiaro/Scuro",
 		noforecast: "Nessuna previsione disponibile. Seleziona una città.",
 		nomatches: "Nessun risultato trovato",
+		'current-conditions': "Condizioni attuali",
+		'five-day-forecast': "Previsioni a cinque giorni",
+		'daily-forecast': "Previsioni orarie",
+		'wind-forecast': "Condizioni del vento",
+		speed: "velocità",
+		gusts: "raffiche",
+		direction: "direzione"
 	},
-	pt: {
-		settings: "Definições",
-		darklight: "Claro/Escuro",
-		noforecast: "Nenhuma previsão disponível. Por favor, selecione uma cidade.",
-		nomatches: "Nenhum resultado encontrado",
-	},
-	nl: {
-		settings: "Instellingen",
-		darklight: "Licht/Donker",
-		noforecast: "Geen weersverwachting beschikbaar. Selecteer een stad.",
-		nomatches: "Geen resultaten gevonden",
-	},
-	pl: {
-		settings: "Ustawienia",
-		darklight: "Jasny/Ciemny",
-		noforecast: "Brak dostępnej prognozy. Proszę wybrać miasto.",
-		nomatches: "Nie znaleziono wyników",
+	es: {
+		noforecast: "No hay pronóstico disponible. Por favor, seleccione una ciudad.",
+		nomatches: "No se encontraron coincidencias",
+		'current-conditions': "Condiciones actuales",
+		'five-day-forecast': "Pronóstico de cinco días",
+		'daily-forecast': "Pronóstico por horas",
+		'wind-forecast': "Condiciones del viento",
+		speed: "velocidad",
+		gusts: "ráfagas",
+		direction: "dirección"
 	},
 	cs: {
-		settings: "Nastavení",
-		darklight: "Světle/Tmavě",
-		noforecast: "Žádná předpověď není k dispozici. Vyberte město.",
+		noforecast: "Předpověď není k dispozici. Vyberte prosím město.",
 		nomatches: "Nebyly nalezeny žádné shody",
+		'current-conditions': "Aktuální podmínky",
+		'five-day-forecast': "Pětidení předpověď",
+		'daily-forecast': "Hodinová předpověď",
+		'wind-forecast': "Podmínky větru",
+		speed: "rychlost",
+		gusts: "nárazy",
+		direction: "směr"
 	},
 	sk: {
-		settings: "Nastavenia",
-		darklight: "Svetlé/Tmavé",
-		noforecast: "Predpoveď nie je k dispozícii. Vyberte mesto.",
-		nomatches: "Nenašli sa žiadne zhodné výsledky",
-	},
+		noforecast: "Predpoveď nie je k dispozícii. Prosím, vyberte mesto.",
+		nomatches: "Nenašli sa žiadne zhody",
+		'current-conditions': "Aktuálne podmienky",
+		'five-day-forecast': "Päťdňová predpoveď",
+		'daily-forecast': "Hodinová predpoveď",
+		'wind-forecast': "Podmienky vetra",
+		speed: "rýchlosť",
+		gusts: "nárazy",
+		direction: "smer"
+	}
 };
 
 export function getUILanguage(): string {
