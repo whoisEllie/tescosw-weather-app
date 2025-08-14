@@ -68,7 +68,7 @@ function SearchBar() {
 						}
 						dispatch(selectCity(mockCity))
 					});
-				}}><img src="/public/icons/pin.svg" /></button>
+				}}><img src="/icons/pin.svg" /></button>
 			</div>
 
 			<div className="resultsCard">
