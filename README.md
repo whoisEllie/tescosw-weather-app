@@ -71,3 +71,9 @@ Projekt je postaven pomocí **React** pro uživatelské rozhraní, **TypeScript*
 * Redux se používá pro uchování aktuálního města a dat o počasí ve centralizovaném store.
 * TypeScript zajišťuje typovou bezpečnost ve všech komponentách a logice stavu.
 * Struktura složek odděluje UI, stav a logiku API pro přehlednost a škálovatelnost.
+
+## 5. CI/CD a nasazení
+
+Projekt má nastavené CI/CD prostřednictvím služby Vercel, takže každá změna v repozitáři je automaticky nasazena.
+
+Aplikace je dostupná na [weather.elliekelemen.com](weather.elliekelemen.com)
